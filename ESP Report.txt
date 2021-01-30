@@ -1,0 +1,84 @@
+# INS: Instructions
+
+1.	Plug-in the Arduino
+2.	A menu will appear, pressing the up button will go into story mode, and the down button into practice mode. Pressing the reset button at any point will return you to this menu to allow you to switch modes.
+
+Story Mode Instructions
+
+1.	A sub-menu will appear, where pressing the left button will show a leaderboard on the serial monitor of the highest levels reached by previous players, and pressing the select button will start the story mode.
+2.	After starting the story mode, it will begin at level 1 and show 4 directions in succession that are either ‘left’ or ‘right’.
+3.	After all of the directions have shown, repeat the sequence by pressing the correct buttons in order.
+4.	If the sequence is correct, the backlight will turn green and you will receive a thumbs up, if it’s incorrect, then the backlight will turn red and it will ask if you want to try again, press the up button to try again or the down button to exit.
+5.	If you choose to exit, the level reached is added to the leaderboard and it returns to the story mode menu.
+6.	The game will become harder and harder up by increasing the number of directions shown and also it will extend to showing ‘up’ and ‘down’ as well.
+7.	The final level is level 15, and once completed, a message is shown and the score is added to the leaderboard, then it returns to the story mode menu. 
+
+Practice Mode Instructions
+
+1.	A sub-menu will appear, where pressing the left button will let you change the number of characters shown from 4 up to 10 using the up and down buttons to change it and the select button to confirm. Pressing the right button allows you to change the number of different characters, again using up and down to change it and press select to confirm. Pressing select on the main sub-menu starts a new game with the chosen settings.
+2.	Once a new game is started, it will show a series of directions.
+3.	After the number of directions have been shown that were chosen on the menu, repeat the sequence by pressing the correct buttons in order.
+4.	If the correct sequence is entered, the backlight will turn green and a thumbs up will appear then return to the practice mode sub-menu.
+5.	If the incorrect sequence is entered, the backlight will turn red and a thumbs down will appear then return to the practice mode sub-menu.
+
+# MFS: Features of the minimal feature set
+
+* Sequences are displayed on the screen as specified: *YES*
+* Backlight flashes (only when correct): *YES*
+* Incorrect answer leads to game over: *YES*
+* Game supports *N* up to 10: *YES*
+* Game supports *M* of size 4: *YES*
+* A menu is present: *YES*
+* Size of *M* can be changed: *YES*
+* *N* can be changed: *YES*
+* Message when wrong printed: *YES*
+
+# OAF: Optional and additional features
+
+* Feature 1 - ‘A story mode to build up though increasing N and M and reducing D’ – I have created a story mode that has 15 levels to progress through that are of increasing difficulty
+* Feature 2 - ‘A menu to switch from practice mode to story mode’ – The main menu allows you to switch between story mode and practice mode and can be accessed by pressing reset
+* Feature 3 - ‘Suitable displays for winning and losing’ – When the user wins the backlight turns green and a thumbs up appears, and if they lose, the backlight turns red and a thumbs down appears
+* Feature 4 - ‘A high score table written to the EEPROM and an addition initial menu option to display the table of high scores’ – A leaderboard that shows the highest levels reached can be accessed from the story mode sub-menu that is displayed on the serial monitor. 
+
+
+# TPL: Test plan
+
+1. Press the up button.
+2. The story mode sub-menu loads and displays the options of starting a game or displaying the leaderboard.
+3. Press the left button.
+4. A leaderboard will be shown on the serial monitor with the position number first, then the level reached after.
+5. Press the select button.
+6. A new game will start and it will show ‘level 1’ then output 4 directions, one at a time that are either ‘left’ or ‘right’.
+7. Once the series of directions has been output, input the correct sequence on the buttons.
+8. The backlight will turn green and a thumbs up will appear to show that you are correct, then the next level will begin.
+9. Once the series of directions has been output, input the incorrect sequence on the buttons.
+10. The backlight will turn red and a message will appear asking if you want to try again – pressing the up button will repeat the level, pressing down will end the game.
+11. After getting the sequence incorrect, press the down button to end the game then press the left button to display the leaderboard.
+12. Pressing the down button will return you to the story mode menu, then pressing the left button will display the leaderboard on which you will see your previous score.
+13. Complete level 15 in the story mode to complete the game.
+14. A message will display saying that you completed the story mode and it will return to the story mode menu.
+15. Press the reset button.
+16. The system returns back to the top menu and shows the options of playing story mode or practice mode.
+17. Press the down button.
+18. The practice mode sub-menu loads and displays a scrolling menu with the options of starting a new practice game, changing the number of characters shown, or changing the number of different characters. 
+19. Press the left button to change the number of characters shown.
+20. The system displays the current number of characters that will be shown.
+21. Press the up button to increase the number of characters shown, then press select to confirm.
+22. The number shown on the display will increase each time the button is pressed up to a maximum of 10, then once select is pressed, it returns to the practice mode menu.
+23. Press the left button to change the number of characters shown.
+24. Press the down button to decrease the number of characters shown, then press select to confirm.
+25. The number shown on the display will decrease each time the button is pressed down to a minimum of 4, then once select is pressed, it returns to the practice mode menu.
+26. Press the right button to change the number of different characters.
+27. The system displays the current number of different characters.
+28. Press the up button to increase the number of different possible characters.
+29. The number shown on the display will increase each time the button is pressed up to a maximum of 4, then once select is pressed, it returns to the practice mode menu.
+30. Press the right button to change the number of different characters.
+31. Press the down button to decrease the number of different possible characters.
+32. The number shown on the display will decrease each time the button is pressed down to a minimum of 2, then once select is pressed, it returns to the practice mode menu.
+33. Press the select button to start a practice game.
+34. A new practice game starts and the sequence of directions is output.
+35. Once the series of directions has been output, input the correct sequence on the buttons.
+36. The backlight will turn green and a thumbs up will appear to show that you are correct, then it will return to the practice mode menu.
+37. Press the select button to start a practice game.
+38. Once the series of directions has been output, input the incorrect sequence on the buttons.
+39. The backlight will turn red and a thumbs down will appear to show that you are incorrect, then it will return to the practice mode menu.
